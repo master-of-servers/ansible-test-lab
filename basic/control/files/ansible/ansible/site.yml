@@ -1,0 +1,6 @@
+---
+- name: Setup basic ansible environment
+  hosts: all
+  become: true
+  roles:
+    - hello

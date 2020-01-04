@@ -1,0 +1,8 @@
+---
+- name: Hello World
+  copy:
+    src: "{{ src_file }}"
+    dest: "{{ dst_file }}"
+    owner: root
+    group: root
+  become: true
