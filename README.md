@@ -1,4 +1,6 @@
 # ansible-test-lab
+[![License](http://img.shields.io/:license-mit-blue.svg)](https://github.com/master-of-servers/ansible-test-lab/blob/master/LICENSE)
+
 Used to create a test lab that can be used to work with MOSE and Ansible.
 
 **Warning, take heed: This lab should be run in a controlled environment; it contains vulnerable assets.**
