@@ -1,5 +1,2 @@
 [managed]
 managednode.demo.com
-
-[control]
-controlnode.demo.com ansible_connection=local

@@ -8,11 +8,13 @@ run:
 	cp files/id_rsa.pub managed/files
 	docker-compose up -d --force-recreate --build
 	echo "Decrypting the vault file"
-	docker exec -it control ansible-vault decrypt /root/.ansible/group_vars/vault
-	docker exec -it control cat /root/.ansible/group_vars/vault 
+	docker exec -it basic-control-node ansible-vault decrypt /root/.ansible/group_vars/vault
+	docker exec -it basic-control-node cat /root/.ansible/group_vars/vault 
 	echo "Encrypting the vault file"
-	docker exec -it control ansible-vault encrypt /root/.ansible/group_vars/vault
-	docker exec -it control cat /root/.ansible/group_vars/vault 
+	docker exec -it basic-control-node ansible-vault encrypt /root/.ansible/group_vars/vault
+	docker exec -it basic-control-node cat /root/.ansible/group_vars/vault
+	echo "Applying the hello playbook to the managed node"
+	docker exec -it basic-control-node bash -c "cd ~/.ansible && ansible-playbook site.yml"
 
 destroy:
 	docker-compose down

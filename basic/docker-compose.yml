@@ -4,7 +4,7 @@ services:
     build:
       context: ./control
       dockerfile: Dockerfile
-    container_name: control
+    container_name: basic-control-node
     hostname: controlnode.demo.com
     volumes:
       - ./ansible:/home/ansible/ansible
@@ -18,14 +18,14 @@ services:
     build:
       context: ./managed
       dockerfile: Dockerfile
-    container_name: managed
+    container_name: basic-managed-node
     hostname: managednode.demo.com
     networks:
       ansible-net:
         ipv4_address: 172.92.0.3
     extra_hosts:
       - 'controlnode.demo.com:172.92.0.2'
-    depends_on: 
+    depends_on:
       - control
 
 networks:
