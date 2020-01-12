@@ -23,6 +23,6 @@ RUN apt-get update && \
   rm -rf /var/lib/apt/lists/*
 
 COPY files/ansible/ansible.cfg /etc/ansible/ansible.cfg 
-COPY files/ansible/inventory /etc/ansible/inventory
+COPY files/ansible/hosts /etc/ansible/hosts
 
 CMD bash; /usr/sbin/sshd -D
