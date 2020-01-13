@@ -6,8 +6,6 @@ services:
       dockerfile: Dockerfile
     container_name: basic-control-node
     hostname: controlnode.demo.com
-    volumes:
-      - ./ansible:/home/ansible/ansible
     networks:
       ansible-net:
         ipv4_address: 172.92.0.2

@@ -20,6 +20,9 @@ RUN apt-get update && \
   # Create vault credential
   echo "p@ssw0rd!" > /root/.ansible/.vault_pass.txt && \
   ansible-vault encrypt /root/.ansible/group_vars/vault && \
+  # Move roles to /etc/ansible
+  mv /root/.ansible/roles/* /etc/ansible/roles/ && \
+  rm -rf /root/.ansible/roles && \
   rm -rf /var/lib/apt/lists/*
 
 COPY files/ansible/ansible.cfg /etc/ansible/ansible.cfg 
