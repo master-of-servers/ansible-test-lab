@@ -1,5 +1,6 @@
 # ansible-test-lab
 [![License](http://img.shields.io/:license-mit-blue.svg)](https://github.com/master-of-servers/ansible-test-lab/blob/master/LICENSE)
+[![Build Status](https://dev.azure.com/jaysonegrace/ansible-test-lab/_apis/build/status/master-of-servers.ansible-test-lab?branchName=master)](https://dev.azure.com/jaysonegrace/ansible-test-lab/_build/latest?definitionId=38&branchName=master)
 
 Used to create a test lab that can be used to work with MOSE and Ansible.
 
